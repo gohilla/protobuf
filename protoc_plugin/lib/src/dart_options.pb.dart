@@ -26,12 +26,16 @@ class DartMixin extends $pb.GeneratedMessage {
   factory DartMixin.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+  @$core.override
   DartMixin clone() => DartMixin()..mergeFromMessage(this);
+  @$core.override
   DartMixin copyWith(void Function(DartMixin) updates) =>
       super.copyWith((message) => updates(message as DartMixin));
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static DartMixin create() => DartMixin._();
+  @$core.override
   DartMixin createEmptyInstance() => create();
   static $pb.PbList<DartMixin> createRepeated() => $pb.PbList<DartMixin>();
   @$core.pragma('dart2js:noInline')
@@ -92,12 +96,16 @@ class Imports extends $pb.GeneratedMessage {
   factory Imports.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+  @$core.override
   Imports clone() => Imports()..mergeFromMessage(this);
+  @$core.override
   Imports copyWith(void Function(Imports) updates) =>
       super.copyWith((message) => updates(message as Imports));
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static Imports create() => Imports._();
+  @$core.override
   Imports createEmptyInstance() => create();
   static $pb.PbList<Imports> createRepeated() => $pb.PbList<Imports>();
   @$core.pragma('dart2js:noInline')

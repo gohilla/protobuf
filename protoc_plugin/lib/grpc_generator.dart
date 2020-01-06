@@ -123,9 +123,12 @@ class GrpcServiceGenerator {
   void _generateService(IndentingWriter out) {
     out.addBlock('abstract class $_serviceClassname extends $_service {', '}',
         () {
+      // Override: $name
+      out.println('@$_coreImportPrefix.override');
       out.println(
           '$_coreImportPrefix.String get \$name => \'$_fullServiceName\';');
       out.println();
+
       out.addBlock('$_serviceClassname() {', '}', () {
         for (final method in _methods) {
           method.generateServiceMethodRegistration(out);

@@ -355,16 +355,28 @@ class MessageGenerator extends ProtobufContainer {
       out.println('factory ${classname}.fromJson($_coreImportPrefix.String i,'
           ' [$_protobufImportPrefix.ExtensionRegistry r = $_protobufImportPrefix.ExtensionRegistry.EMPTY])'
           ' => create()..mergeFromJson(i, r);');
+
+      // Override: clone
+      out.println('@$_coreImportPrefix.override');
       out.println('${classname} clone() =>'
           ' ${classname}()..mergeFromMessage(this);');
+
+      // Override: copyWith
+      out.println('@$_coreImportPrefix.override');
       out.println('$classname copyWith(void Function($classname) updates) =>'
           ' super.copyWith((message) => updates(message as $classname));');
 
+      // Override: info_
+      out.println('@$_coreImportPrefix.override');
       out.println('$_protobufImportPrefix.BuilderInfo get info_ => _i;');
 
+      // Static method: create
       // Factory functions which can be used as default value closures.
       out.println("@${_coreImportPrefix}.pragma('dart2js:noInline')");
       out.println('static ${classname} create() => ${classname}._();');
+
+      // Override: createEmptyInstance
+      out.println('@$_coreImportPrefix.override');
       out.println('${classname} createEmptyInstance() => create();');
 
       out.println(
@@ -622,16 +634,16 @@ class MessageGenerator extends ProtobufContainer {
     var nestedEnumNames =
         _enumGenerators.map((e) => e.getJsonConstant(fileGen)).toList();
 
-    out.addBlock("const $name = const {", "};", () {
+    out.addBlock("const $name = {", "};", () {
       for (var key in json.keys) {
         out.print("'$key': ");
         if (key == "$nestedTypeTag") {
           // refer to message constants by name instead of repeating each value
-          out.println("const [${nestedTypeNames.join(", ")}],");
+          out.println("[${nestedTypeNames.join(", ")}],");
           continue;
         } else if (key == "$enumTypeTag") {
           // refer to enum constants by name
-          out.println("const [${nestedEnumNames.join(", ")}],");
+          out.println("[${nestedEnumNames.join(", ")}],");
           continue;
         }
         writeJsonConst(out, json[key]);

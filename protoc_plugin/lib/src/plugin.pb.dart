@@ -29,12 +29,16 @@ class Version extends $pb.GeneratedMessage {
   factory Version.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+  @$core.override
   Version clone() => Version()..mergeFromMessage(this);
+  @$core.override
   Version copyWith(void Function(Version) updates) =>
       super.copyWith((message) => updates(message as Version));
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static Version create() => Version._();
+  @$core.override
   Version createEmptyInstance() => create();
   static $pb.PbList<Version> createRepeated() => $pb.PbList<Version>();
   @$core.pragma('dart2js:noInline')
@@ -109,13 +113,17 @@ class CodeGeneratorRequest extends $pb.GeneratedMessage {
   factory CodeGeneratorRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+  @$core.override
   CodeGeneratorRequest clone() =>
       CodeGeneratorRequest()..mergeFromMessage(this);
+  @$core.override
   CodeGeneratorRequest copyWith(void Function(CodeGeneratorRequest) updates) =>
       super.copyWith((message) => updates(message as CodeGeneratorRequest));
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static CodeGeneratorRequest create() => CodeGeneratorRequest._();
+  @$core.override
   CodeGeneratorRequest createEmptyInstance() => create();
   static $pb.PbList<CodeGeneratorRequest> createRepeated() =>
       $pb.PbList<CodeGeneratorRequest>();
@@ -175,15 +183,19 @@ class CodeGeneratorResponse_File extends $pb.GeneratedMessage {
   factory CodeGeneratorResponse_File.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+  @$core.override
   CodeGeneratorResponse_File clone() =>
       CodeGeneratorResponse_File()..mergeFromMessage(this);
+  @$core.override
   CodeGeneratorResponse_File copyWith(
           void Function(CodeGeneratorResponse_File) updates) =>
       super.copyWith(
           (message) => updates(message as CodeGeneratorResponse_File));
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static CodeGeneratorResponse_File create() => CodeGeneratorResponse_File._();
+  @$core.override
   CodeGeneratorResponse_File createEmptyInstance() => create();
   static $pb.PbList<CodeGeneratorResponse_File> createRepeated() =>
       $pb.PbList<CodeGeneratorResponse_File>();
@@ -246,14 +258,18 @@ class CodeGeneratorResponse extends $pb.GeneratedMessage {
   factory CodeGeneratorResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+  @$core.override
   CodeGeneratorResponse clone() =>
       CodeGeneratorResponse()..mergeFromMessage(this);
+  @$core.override
   CodeGeneratorResponse copyWith(
           void Function(CodeGeneratorResponse) updates) =>
       super.copyWith((message) => updates(message as CodeGeneratorResponse));
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static CodeGeneratorResponse create() => CodeGeneratorResponse._();
+  @$core.override
   CodeGeneratorResponse createEmptyInstance() => create();
   static $pb.PbList<CodeGeneratorResponse> createRepeated() =>
       $pb.PbList<CodeGeneratorResponse>();

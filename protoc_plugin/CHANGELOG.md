@@ -1,3 +1,10 @@
+## 20.0.0
+
+* Breaking: Generates code requires at least Dart SDK 2.5.
+  * The generated code uses new `const` features in SDK 2.5.
+* Added ``@override` annotations.
+* As a result of these changes, pedantic linter warnings have been eliminated.
+
 ## 19.0.2
 
 * Fix: escape the special character `$` in descriptor's `json_name`.
